@@ -10,7 +10,7 @@ Install dependencies:
 yarn
 ```
 
-Start dev server:
+Start dev server on port `8081`:
 
 ```
 yarn serve
