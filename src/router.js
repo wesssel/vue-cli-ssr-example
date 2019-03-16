@@ -1,7 +1,8 @@
 // router.js
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+
+const HelloWorld = () => import('./components/HelloWorld.vue')
 
 Vue.use(Router)
 
@@ -11,11 +12,12 @@ export function createRouter () {
     routes: [
       {
         path: '/',
-        component: HelloWorld
+        component: HelloWorld,
+        props: {  msg: 'Hello, World!' }
       },
-      { 
-        path: '*', 
-        redirect: '/' 
+      {
+        path: '*',
+        redirect: '/'
       }
     ]
   })
